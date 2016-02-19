@@ -1,0 +1,7 @@
+ENTLIB= ent/ent.o ent/randtest.o ent/iso8859.o ent/chisq.o
+
+pictureleaks : pictureleaks.o $(ENTLIB) -ljpeg -lm
+	gcc -o pictureleaks pictureleaks.o $(ENTLIB) -ljpeg -lm
+
+install:
+	cp pictureleaks /usr/local/bin

@@ -21,7 +21,7 @@ accuracy of X percent accieved using a likelyhood threshold of Y percent tested 
 ##Requirements
 libjpg version 8a or higher
 
-##Compilation and instalation (installs into /usr/)
+##Compilation and instalation (installs into /usr/local/bin)
 To compile, simply run
 
 `make`

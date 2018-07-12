@@ -47,6 +47,14 @@ To analyze all jpg files in the current directory and save results to a file nam
 
 `atomicjpeg *.jpg > results`
 
+##Further work
+* look at http://www.ws.binghamton.edu/fridrich/Research/dc_7_dc.pdf
+* look at https://belkasoft.com/forgery-detection
+* look at http://www.getghiro.org/
+* incorporate metadata using exiftool
+* introduce machine learning with tflearn (regression example here https://github.com/b3dk7/horses-ml)
+* create massive csv file containing a whole bunch of features for all jpeg files
+
 
 
 ##Support

@@ -59,6 +59,6 @@ To analyze all jpg files in the current directory and save results to a file nam
 
 ## Support
 
-Feel free to message me about any issues. My email is benedikt(at)riseup(dot)net
+Feel free to message me about any issues. My email is benedikt(dot)boehm(at)posteo(dot)net
 
 ps: please let me know anyone wants to be able to output the DCT histogram itself, I would be glad to add this feature.

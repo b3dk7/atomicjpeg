@@ -7,58 +7,37 @@ The algorithm employed, determines the smoothnes of a jpg's quantized DCT coefic
 The program performs better on larger images as they provide a greater sample of coeficinets to work with. We do not suggest using this software on images smaller than 1 mega pixel.
 
 
-## Making the most of atomicjpeg
-We suggest atomicjpeg is to
-
-## Performance
-### accuracy
-accuracy of X percent accieved using a likelyhood threshold of Y percent tested on a pool of Z original and W photoshoped fotos. 
-
-### speed
-0.3 seconds per 13 mega pixel image tested with an intel i3 (2.4GHz) and 6GB of ram
 
 
 ## Requirements
-libjpg version 8a or higher
+c compiler (we recommend gcc)
+ruby
+probably easier to do this in linux
 
-## Compilation and instalation (installs into /usr/local/bin)
-To compile, simply run
+## First Step - Compile the C programs
+navigate into this directory
+extract the jpeg library - `tar xvf jpegsrc.v8a.tar.gz`
+compile the jpeg library - `cd jpeg-8a; ./configure; make`
+compile the dct_dump program - `cd ..; gcc dct_dump.c -o dct_dump -I jpeg-8a/ -L jpeg-8a/.libs -l jpeg`
 
-`make`
+## Second Step - install all the Gems (Ruby Libraries)
 
-to install, log in as root and rum
+`sudo gem install exifr`
+`sudo gem install histogram`
 
-`make install`
+## Finals Step run the ruby scripts
 
-## Usage and output
-for usage instructions compile and run
+`ruby histogram.rb test_images/*`
 
-`atomicjpeg [FILES]`
 
-The output is 
-
-## Example
-
-To analyze a single file run
-
-`atomicjpeg pic.jpg`
-
-To analyze all jpg files in the current directory and save results to a file names 'results' run
-
-`atomicjpeg *.jpg > results`
 
 ## Further work
 * look at http://www.ws.binghamton.edu/fridrich/Research/dc_7_dc.pdf
 * look at https://belkasoft.com/forgery-detection
 * look at http://www.getghiro.org/
 * incorporate metadata using exiftool
-* introduce machine learning with tflearn (regression example here https://github.com/b3dk7/horses-ml)
+* introduce machine learning with tflearn or tensor flow (regression example here https://github.com/b3dk7/horses-ml)
 * create massive csv file containing a whole bunch of features for all jpeg files
 
-
-
 ## Support
-
 Feel free to message me about any issues. My email is benedikt(dot)boehm(at)posteo(dot)net
-
-ps: please let me know anyone wants to be able to output the DCT histogram itself, I would be glad to add this feature.

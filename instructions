@@ -1,8 +1,0 @@
-encryption
-----------
-openssl enc -aes-256-cbc -in x.zip -out x.zip.ssl
-
-
-decryption
-----------
-openssl enc -aes-256-cbc -d -in x.zip.ssl > give.zip

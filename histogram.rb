@@ -16,7 +16,7 @@ ARGV.each do |img|
     print File.basename(img)
     #q_tables = `djpeg -verbose -verbose #{img} > /dev/null 2> q_tables.txt`
     
-    dct = `./customdump #{img} raw`
+    dct = `./dct_dump #{img} raw`
     dct = dct.split("\n").map(&:to_i)
     
     #dct.reject! {|x| x < 2 or x > 30}

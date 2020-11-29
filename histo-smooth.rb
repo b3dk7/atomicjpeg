@@ -10,7 +10,7 @@ ARGV.each do |img|
     
     print File.basename(img)+','
     
-    dct = `./customdump #{img} raw`
+    dct = `./dct_dump #{img} raw`
     dct = dct.split("\n").map(&:to_i)
     
 

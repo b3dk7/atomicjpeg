@@ -15,7 +15,7 @@ ARGV.each do |img|
     data = EXIFR::JPEG.new(img)
     
     
-    q_tables = `djpeg -verbose -verbose #{img} > /dev/null 2> q_tables.txt`
+    q_tables = `./jpeg-8a/djpeg -verbose -verbose #{img} > /dev/null 2> q_tables.txt`
     
     
     

@@ -31,8 +31,8 @@ The program performs better on larger images as they provide a greater sample of
 * `ruby histogram.rb test_images/*`
 
 ## Explanation of the scripts
-* atomicjpeg.rb will output the 'roughness' of DCT coefficiant histogram curve. The rougher the curve, the highter the output value of the script and more likely it is that the photo has been manipulated. See the following paper to more context http://www.ws.binghamton.edu/fridrich/Research/dc_7_dc.pdf
-* histogram.rb will output an images DCT histogram in CSV format.
+* `atomicjpeg.rb` will output the 'roughness' of DCT coefficiant histogram curve. The rougher the curve, the highter the output value of the script and more likely it is that the photo has been manipulated. See the following paper to more context http://www.ws.binghamton.edu/fridrich/Research/dc_7_dc.pdf
+* `histogram.rb` will output an images DCT histogram in CSV format.
 
 
 

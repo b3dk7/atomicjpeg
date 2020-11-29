@@ -27,7 +27,7 @@ The program performs better on larger images as they provide a greater sample of
 
 ## Finals Step run the ruby scripts
 
-* `ruby atmoicjpeg.rb test_images/*`
+* `ruby atomicjpeg.rb test_images/*`
 * `ruby histogram.rb test_images/*`
 
 ## Explanation of the scripts

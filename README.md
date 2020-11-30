@@ -38,11 +38,11 @@ The program performs better on larger images as they provide a greater sample of
 * `histogram.rb` will output an images DCT histogram in CSV format.
 
 ## description of atomicjpeg values
-* 0	-0.05	highly likely original 90%
-* 0.05-0.1	likely original 70 %
-* 0.1	-0.15	equally likely to be original or fake 50%
-* 0.15 - 0.2 likely to be fake  30% likely to be original
-* 0.2 > very likely to be fake 10%
+* 0	-0.05 |	90% likely of being an original
+* 0.05-0.1 | 70% likely of being an original
+* 0.1	-0.15	| 50% likely of bieng an original
+* 0.15 - 0.2 | 30% likely of being an original
+* 0.2 > infinity  |  10% likely of being an original
 
 
 ## short term work

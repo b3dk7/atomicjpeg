@@ -4,10 +4,12 @@ require 'histogram/array'
 def format_q(s)
 	return s.scan(/\d+/).join('-')
 end
-
-ARGV.each do |img|
+directory = ARGV[0]
+Dir.foreach(directory) do |img|
+	next if img == '.' or img == '..'
+	begin
 	print File.basename(img)+','
-	dct = `./dct_dump #{img} raw`
+	dct = `./dct_dump #{directory}/#{img} raw`
 	dct = dct.split("\n").map(&:to_i)
 	dct.sort!
 	histogram = [*dct.group_by{ |v| v }.flat_map{ |k, v| [k, v.size] }]
@@ -37,4 +39,7 @@ ARGV.each do |img|
 	end	
 	average_error = error/list.size
 	puts average_error
+	rescue
+	end
+
 end

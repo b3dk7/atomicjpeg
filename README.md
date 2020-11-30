@@ -28,11 +28,12 @@ The program performs better on larger images as they provide a greater sample of
 
 ## Finals Step run the ruby scripts
 
-* `ruby atomicjpeg.rb test_images/*`
-* `ruby histogram.rb test_images/*`
+* `ruby atomicjpeg.rb test_images`
+* `ruby histogram.rb test_images`
 * if you restart your machine you will likely have to reset your path variable ``export LD_LIBRARY_PATH="`pwd`/jpeg-8a/.libs:$LD_LIBRARY_PATH"``
 
 ## Explanation of the scripts
+* curreytly the only agrument for each ruby script is the directory containing the jpeg files you are wishing to analyse
 * `atomicjpeg.rb` will output the 'roughness' of DCT coefficiant histogram curve. The rougher the curve, the highter the output value of the script and more likely it is that the photo has been manipulated. See the following paper to more context http://www.ws.binghamton.edu/fridrich/Research/dc_7_dc.pdf
 * `histogram.rb` will output an images DCT histogram in CSV format.
 

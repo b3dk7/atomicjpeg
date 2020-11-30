@@ -19,6 +19,7 @@ The program performs better on larger images as they provide a greater sample of
 * extract the jpeg library - `tar xvf jpegsrc.v8a.tar.gz`
 * compile the jpeg library - `cd jpeg-8a; ./configure; make`
 * compile the dct_dump program - `cd ..; gcc dct_dump.c -o dct_dump -I jpeg-8a/ -L jpeg-8a/.libs -l jpeg`
+* set you path variable - ``export LD_LIBRARY_PATH="`pwd`/jpeg-8a/.libs:$LD_LIBRARY_PATH"``
 
 ## Second Step - install all the Gems (Ruby Libraries)
 
@@ -29,6 +30,7 @@ The program performs better on larger images as they provide a greater sample of
 
 * `ruby atomicjpeg.rb test_images/*`
 * `ruby histogram.rb test_images/*`
+* if you restart your machine you will likely have to reset your path variable ``export LD_LIBRARY_PATH="`pwd`/jpeg-8a/.libs:$LD_LIBRARY_PATH"``
 
 ## Explanation of the scripts
 * `atomicjpeg.rb` will output the 'roughness' of DCT coefficiant histogram curve. The rougher the curve, the highter the output value of the script and more likely it is that the photo has been manipulated. See the following paper to more context http://www.ws.binghamton.edu/fridrich/Research/dc_7_dc.pdf

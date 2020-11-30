@@ -37,6 +37,14 @@ The program performs better on larger images as they provide a greater sample of
 * `atomicjpeg.rb` will output the 'roughness' of DCT coefficiant histogram curve. The rougher the curve, the highter the output value of the script and more likely it is that the photo has been manipulated. See the following paper to more context http://www.ws.binghamton.edu/fridrich/Research/dc_7_dc.pdf
 * `histogram.rb` will output an images DCT histogram in CSV format.
 
+## description of atomicjpeg values
+* 0	-0.05	highly likely original 90%
+* 0.05-0.1	likely original 70 %
+* 0.1	-0.15	equally likely to be original or fake 50%
+* 0.15 - 0.2 likely to be fake  30% likely to be original
+* 0.2 > very likely to be fake 10%
+
+
 ## short term work
 * put all fuctionality into atomicjpeg.rb (start with histogram.rb)
 * when iterrating though files scip everything that is not jpg or jpeg

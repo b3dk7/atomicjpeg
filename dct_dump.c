@@ -5,6 +5,7 @@
 
 
 #include <stdio.h>
+#include <string.h>
 #include <assert.h>
 #include <setjmp.h>
 #include <jpeglib.h>
@@ -44,7 +45,7 @@ void print_dct_coef(
 				dc = buf[sf][b][j];
 				dc = MAX(-128, dc);
 				dc = MIN(128, dc);
-				
+
 				if(opt==1)
 					printf("%6d", dc);
 				else
@@ -52,7 +53,7 @@ void print_dct_coef(
                         printf("%d\n", dc);
                     }
 				if(opt==1)
-            	if(j%8==7) 
+            	if(j%8==7)
 						puts("");
 
 			}
@@ -69,7 +70,7 @@ GLOBAL(int) read_JPEG_file (char * filename, int opt)
 	struct jpeg_error_mgr jerr;
 	FILE * infile;
 
-	if ((infile = fopen(filename, "rb")) == NULL) 
+	if ((infile = fopen(filename, "rb")) == NULL)
 	{
 		fprintf(stderr, "can't open %s\n", filename);
 		return 0;
